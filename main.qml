@@ -64,10 +64,7 @@ Rectangle {
             title: "TAB6"
             Loader  { source:"tab6.qml" }
         }
-        Tab {
-            title: "TAB7"
-            Loader  { source:"tab7.qml" }
-        }
+       
 
     }
 
