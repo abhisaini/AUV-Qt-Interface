@@ -18,4 +18,6 @@ DISTFILES += \
     tab2.qml \
     sensor_name.qml \
     sensor_topics.qml \
-    sensor_stats.qml
+    sensor_stats.qml \
+    monitor.qml \
+    monitor_half2.qml

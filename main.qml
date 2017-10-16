@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.4
+import QtQuick.Controls.Styles 1.4
 
 
 Rectangle {
@@ -21,15 +22,15 @@ Rectangle {
 
     Image {
         id: logo
-        source: "http://auv-iitk.github.io/images/logo.jpg"
+        source: "http://auviitk.com/images/logo.jpg"
         y:20;
-        cache: true;
+        cache: false;
         onStatusChanged: if (logo.status == Image.Ready) console.log('')
 
         anchors.horizontalCenter: page.horizontalCenter
 
     }
-    Text { text: logo.status == Image.Ready ? '' : 'AUV-IITK'; font.family: "FreeSans"; font.pointSize:40 ;height:40; color: "#ffffff";y:20;
+    Text { text: logo.status == Image.Ready ? '' : 'AUV-IITK'; font.family: "comic sans ms"; font.pointSize:80 ;height:40; color: "#ffffff";y:20;
         anchors.horizontalCenter: page.horizontalCenter
 
     }
@@ -64,7 +65,14 @@ Rectangle {
             title: "TAB6"
             Loader  { source:"tab6.qml" }
         }
-       
+        Tab {
+            title: "HEALTH MONITOR"
+            Loader  { source:"monitor.qml" }
+
+        }
+
+
+
 
     }
 

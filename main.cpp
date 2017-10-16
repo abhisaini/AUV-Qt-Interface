@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 
 #include <qt5/QtQml/QtQml>
-#include <qt5/QtQml/QQmlEngine>>
+#include <qt5/QtQml/QQmlEngine>
 
 int main(int argc, char *argv[])
 {
