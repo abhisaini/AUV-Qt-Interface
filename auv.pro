@@ -19,4 +19,5 @@ DISTFILES += \
     sensor_name.qml \
     sensor_topics.qml \
     sensor_stats.qml \
-    monitor.qml
+    monitor.qml \
+    nodes.qml

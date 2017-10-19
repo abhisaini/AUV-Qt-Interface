@@ -50,8 +50,8 @@ Rectangle {
             Loader  { source:"tab2.qml" }
         }
         Tab {
-            title: "TAB3"
-            Loader  { source:"tab3.qml" }
+            title: "NODES"
+            Loader  { source:"nodes.qml" }
         }
         Tab {
             title: "TAB4"
