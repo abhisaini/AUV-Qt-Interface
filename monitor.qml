@@ -182,10 +182,62 @@ Rectangle{
                    }
 
                }
+               //status
                Rectangle{
                    height:255;width:427.5;
                    border.color:'black';
                    border.width: 2.5;
+                   id:statusInfo;
+                   Column{
+                       anchors.horizontalCenter: statusInfo.horizontalCenter;
+                       anchors.verticalCenter: statusInfo.verticalCenter;
+                       Rectangle{
+                           width:320;
+                           height:50;
+                           color:'black';
+                           id:coverstat1;
+                           Text {
+                               font.pointSize: 12;
+                               font.bold: true;
+                               color:'white';
+                               text: 'STATUS';
+                               anchors.horizontalCenter: coverstat1.horizontalCenter;
+                               anchors.verticalCenter: coverstat1.verticalCenter;
+                           }
+                       }
+                       Rectangle{
+                           width:320;
+                           height:180;
+                           border.color:'black';
+                           border.width: 2;
+                           id:coverstat2;
+                           color:'#04dc64';
+                           //status plot
+                           Rectangle{
+                               height:154;
+                               width:204;
+                               anchors.horizontalCenter: coverstat2.horizontalCenter;
+                               anchors.verticalCenter: coverstat2.verticalCenter;
+                               border.color:'black';
+                               border.width:2;
+                               id:s1;
+                               //status
+                               Image {
+                                   id: status;
+                                   height:140;
+                                   width: 140;
+
+                                   source: "/home/abhi/qt examples/AUV_UI/AUV-Qt-Interface/up.png";
+                                   anchors.horizontalCenter: s1.horizontalCenter;
+                                   anchors.verticalCenter: s1.verticalCenter;
+
+                               }
+
+
+                           }
+                       }
+                   }
+
                }
 
            }

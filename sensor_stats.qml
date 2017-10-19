@@ -83,6 +83,7 @@ Rectangle{
                 color:'green';
                 anchors.horizontalCenter: sen4.horizontalCenter;
                 anchors.verticalCenter: sen4.verticalCenter;
+
             }
         }
 
