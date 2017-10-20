@@ -105,7 +105,6 @@ Rectangle{
                                height:40;
                                anchors.horizontalCenter: packDown.horizontalCenter;
                                anchors.verticalCenter: packDown.verticalCenter;
-
                            }
 
                        }
@@ -124,7 +123,14 @@ Rectangle{
            border.color:'black';
            border.width: 5;
            id:half2;
+            Loader{
+                source:'node_des1.qml';
+                height:440;
+                width:850;
+                anchors.horizontalCenter: half2.horizontalCenter;
+                anchors.verticalCenter: half2.verticalCenter;
 
+            }
 
 
        }
