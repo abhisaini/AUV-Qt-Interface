@@ -21,4 +21,5 @@ DISTFILES += \
     sensor_stats.qml \
     monitor.qml \
     nodes.qml \
-    node_des1.qml
+    node_des1.qml \
+    reconfig.qml

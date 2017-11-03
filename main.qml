@@ -7,7 +7,7 @@ import QtQuick.Controls.Styles 1.4
 Rectangle {
     id: page
     width: 1000; height: 850;
-    color: "lightgray"
+    color: "#404144"
 
    /* Text {
         id: helloText
@@ -58,8 +58,8 @@ Rectangle {
             Loader  { source:"tab4.qml" }
         }
         Tab {
-            title: "TAB5"
-            Loader  { source:"tab5.qml" }
+            title: "RECONFIG"
+            Loader  { source:"reconfig.qml" }
         }
         Tab {
             title: "TAB6"
