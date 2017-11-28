@@ -79,7 +79,7 @@ Rectangle {
                                         y:2;
                                         columns:2;
                                         rowSpacing: 2;
-                                        anchors.horizontalCenter: scrolls.horizontalCenter;
+
 ////Node 1 info block
                                         Rectangle{
 
@@ -218,6 +218,43 @@ Rectangle {
                                                 color:'red';
                                                 anchors.horizontalCenter: nodeStatus4.horizontalCenter;
                                                 anchors.verticalCenter: nodeStatus4.verticalCenter;
+
+                                            }
+
+                                        }
+
+/////Node 5 block info
+
+                                        Rectangle{
+
+                                            height:70;
+                                            width:350;
+                                            border.color: 'black';
+                                            border.width:1.5;
+                                            id:nodeName5;
+                                            Text{
+                                                text:"Node 5";
+                                                font.pointSize: 15;
+                                                anchors.horizontalCenter: nodeName5.horizontalCenter;
+                                                anchors.verticalCenter: nodeName5.verticalCenter;
+
+                                            }
+                                        }
+                                        Rectangle{
+
+                                            height:70;
+                                            width:125;
+                                            border.color:'black';
+                                            border.width:1.5;
+                                            id:nodeStatus5
+                                            Rectangle{
+                                                height:50;
+                                                width:50;
+                                                border.color:'black';
+                                                border.width: 3;
+                                                color:'red';
+                                                anchors.horizontalCenter: nodeStatus5.horizontalCenter;
+                                                anchors.verticalCenter: nodeStatus5.verticalCenter;
 
                                             }
 

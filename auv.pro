@@ -3,7 +3,9 @@ TEMPLATE = app
 QT += qml quick
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    build/qrc_qml.cpp \
+    qrc_qml.cpp
 
 RESOURCES += qml.qrc
 
@@ -22,4 +24,20 @@ DISTFILES += \
     monitor.qml \
     nodes.qml \
     node_des1.qml \
-    reconfig.qml
+    reconfig.qml \
+    alpha.qml \
+    remote.qml \
+    build/Alpha3 \
+    auv \
+    down.png \
+    logo .png \
+    up.png \
+    README.md \
+    logo .png \
+    Remote/remote_sway.qml \
+    Remote/remote_vrward.qml \
+    Remote/remote_forward.qml \
+    logo .png \
+    remote/remote_forward.qml \
+    remote/remote_sway.qml \
+    remote/remote_vrward.qml

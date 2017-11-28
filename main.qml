@@ -54,8 +54,8 @@ Rectangle {
             Loader  { source:"nodes.qml" }
         }
         Tab {
-            title: "TAB4"
-            Loader  { source:"tab4.qml" }
+            title: "REMOTE CONTROL"
+            Loader  { source:"remote.qml" }
         }
         Tab {
             title: "RECONFIG"
