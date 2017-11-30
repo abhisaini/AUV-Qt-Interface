@@ -79,7 +79,7 @@ Window{
             style: TabViewStyle {
                 frameOverlap: 3
                 tab: Rectangle {
-                    color: styleData.selected ? "#F6F6F6" :"#E5E1E1"
+                    color: styleData.selected ? "#F6F6F6" :"lightgrey"
                     border.color:  "black"
                     implicitWidth: Math.max(text.width + 30, 80)
                     implicitHeight: styleData.selected ? "32" :"30"

@@ -190,6 +190,13 @@ Rectangle{
                        height:200;
                        border.width: 3;
                        border.color: "black";
+                       color:'grey';
+                       Text{
+                           anchors.centerIn: parent;
+                           text:'description <br> description';
+                           color:'white';
+                           font.pointSize: 11;
+                       }
                    }
 
                    Rectangle{
@@ -197,6 +204,13 @@ Rectangle{
                        height:200;
                        border.width: 3;
                        border.color: "black";
+                       color:'grey'
+                       Text{
+                           anchors.centerIn: parent;
+                           text:'description <br> description';
+                           color:'white';
+                           font.pointSize: 11;
+                       }
                    }
                }
            }

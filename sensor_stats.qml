@@ -22,10 +22,12 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'green';
                 anchors.horizontalCenter: sen1.horizontalCenter;
                 anchors.verticalCenter: sen1.verticalCenter;
+
             }
         }
 
@@ -41,7 +43,8 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'green';
                 anchors.horizontalCenter: sen2.horizontalCenter;
                 anchors.verticalCenter: sen2.verticalCenter;
@@ -60,7 +63,8 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'green';
                 anchors.horizontalCenter: sen3.horizontalCenter;
                 anchors.verticalCenter: sen3.verticalCenter;
@@ -79,7 +83,8 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'green';
                 anchors.horizontalCenter: sen4.horizontalCenter;
                 anchors.verticalCenter: sen4.verticalCenter;
@@ -99,7 +104,8 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'green';
                 anchors.horizontalCenter: sen5.horizontalCenter;
                 anchors.verticalCenter: sen5.verticalCenter;
@@ -117,7 +123,8 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'red';
                 anchors.horizontalCenter: sen6.horizontalCenter;
                 anchors.verticalCenter: sen6.verticalCenter;
@@ -137,7 +144,8 @@ Rectangle{
                 height:30;
                 width:30;
                 border.width: 2;
-                border.color:'grey';
+                border.color:'black';
+                radius: 15;
                 color:'green';
                 anchors.horizontalCenter: sen7.horizontalCenter;
                 anchors.verticalCenter: sen7.verticalCenter;

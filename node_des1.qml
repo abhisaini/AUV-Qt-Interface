@@ -75,6 +75,8 @@ Rectangle {
                                     width:475;
                                     height: 270;
                                     id:scrolls;
+                                    verticalScrollBarPolicy: Qt.ScrollBarAlwaysOff;
+                                    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff;
                                     Grid{
                                         y:2;
                                         columns:2;
