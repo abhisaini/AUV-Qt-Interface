@@ -9,7 +9,7 @@ Rectangle{
         id:frame;
         anchors.horizontalCenter: page.horizontalCenter;
         anchors.verticalCenter: page.verticalCenter;
-        border.color:" green";
+        border.color:" black";
         border.width: 5;
         width:860;
         height:550;

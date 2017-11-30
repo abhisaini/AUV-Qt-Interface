@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls 1.4
 
 Rectangle{
     id:page;
@@ -17,7 +18,7 @@ Rectangle{
 
             columnSpacing:20;
             columns:3;
-            rows:2;
+            rows:3;
             anchors.horizontalCenter: frame.horizontalCenter;
             anchors.verticalCenter: frame.verticalCenter;
             Rectangle{
@@ -59,7 +60,7 @@ Rectangle{
                 width:250;
                 Text {
 
-                    text: qsTr("VRWARD");
+                    text: qsTr("UPWARD");
                     font.bold: true;
                     font.pointSize: 15;
                     color:"white";
@@ -70,7 +71,7 @@ Rectangle{
 
             }
             Rectangle{
-                height:450;
+                height:420;
                 border.color:"black";
                 border.width: 2;
                 width:250;
@@ -80,7 +81,7 @@ Rectangle{
 
             }
             Rectangle{
-                height:450;
+                height:420;
                 border.color:"black";
                 border.width: 2;
                 width:250;
@@ -90,15 +91,48 @@ Rectangle{
 
             }
             Rectangle{
-                height:450;
+                height:420;
                 border.color:"black";
                 border.width: 2;
                 width:250;
                 Loader{
-                    source:"remote/remote_vrward.qml";
+                    source:"remote/remote_upward.qml";
                 }
 
             }
+
+            //no use of rectangle...but dont remove
+            Rectangle{
+                height: 30;
+                width:250;
+            }
+
+            //no use of rectangle...but dont remove
+
+            Rectangle{
+                height: 30;
+                width:250;
+            }
+
+
+            //keyboard inputs
+            Rectangle{
+                height: 30;
+                width:250;
+                id:keyboardInput;
+                CheckBox {
+                        anchors.right:  keyboardInput.right;
+                        anchors.rightMargin: 15;
+
+                        anchors.verticalCenter: keyboardInput.verticalCenter;
+                        text: qsTr("Keyboard Inputs")
+
+                        checked: true
+                    }
+
+
+            }
+
     }
 }
 }

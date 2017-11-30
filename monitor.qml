@@ -227,7 +227,7 @@ Rectangle{
                                    height:140;
                                    width: 140;
 
-                                   source: "/home/abhi/qt examples/AUV_UI/AUV-Qt-Interface/up.png";
+                                   source: "https://healthycities.zendesk.com/hc/en-us/article_attachments/209680088/Thumbs_up_icon_-_500px.png";
                                    anchors.horizontalCenter: s1.horizontalCenter;
                                    anchors.verticalCenter: s1.verticalCenter;
 
