@@ -1,8 +1,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
-
+import Motion.header 1.0
 Rectangle {
+
+    //signal someClicked()
+    property int pWM3 : 0
+    property int pWM4: 0
+
     id:page;
     height:420;
     width:250;
@@ -17,16 +22,19 @@ Rectangle {
          border.color: 'black';
          border.width: 2;
          id:cover;
+
+
+
          TabView{
              height: 228;
              width: 246;
              anchors.horizontalCenter: cover.horizontalCenter;
              anchors.verticalCenter: cover.verticalCenter;
-
              Tab{
                  title: 'T-3'
                  Loader{
                      source: 'thrust3.qml'
+
                  }
              }
              Tab{
@@ -53,7 +61,6 @@ Rectangle {
                  }
                  frame: Rectangle { color: "white" ;border.color:'black';border.width: 1;}
              }
-
 
          }
 
@@ -93,16 +100,40 @@ Rectangle {
                  width:70;
                  border.color:'black';
                  id:pv3
-                 Text{
-                     text:'247';
-                     color:'black';
+                 TextField{
+                     text:move.getPWM3();
+                     horizontalAlignment : TextInput.AlignHCenter;
+                     //color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv3.horizontalCenter;
                      anchors.verticalCenter: pv3.verticalCenter;
+                     width: 68 ;
+                     height : 48;
                      font.bold: true;
                      id:valuePWM3
+                     validator: IntValidator {bottom: -255; top: 255;}
+                     focus: true
+                     onAccepted: {
+                         move.updatePWM3(this.text);
+                     }
 
+
+                     Connections{
+                         target: move ;
+                         onUpdatedPWM3 :{
+                             console.log(121) ;
+                             valuePWM3.text=move.getPWM3();
+                         }
+                     }
+
+                    /* Remote{
+                         onUpdatedPWM3: {
+                             valuePWM3.text = move.getPWM3();
+                             console.log("ccccc\n");
+                         }
+                     }*/
                  }
+
 
              }
 
@@ -129,7 +160,7 @@ Rectangle {
                  border.color:'black';
                  id:pv4
                  Text{
-                     text:'174';
+                     text:'0';
                      color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv4.horizontalCenter;
@@ -142,13 +173,18 @@ Rectangle {
          }
         }
     }
+
 }
 
 
 
 
+/*
 
 
+
+
+*/
 
 
 

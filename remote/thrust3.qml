@@ -2,6 +2,10 @@ import QtQuick 2.0
 import QtQuick.Controls 1.4
 
 Rectangle {
+
+    signal fwdPWMchanged3(int nwPWM3)
+    property int flag3 : 0
+    property int dirn: 0
     height:228;
     width:246;
     id:detTh3;
@@ -12,8 +16,30 @@ Rectangle {
         id:col;
         Slider{
             id:setPWM3;
-            value: .1;
+            maximumValue: 255.0
+            stepSize: 1.0
+            activeFocusOnPress : true
+            onValueChanged: {
+                if (flag3 == 0){
+                    move.updatePWM3(this.value)
+                }
+                else{
+                    flag3 = 0;
+                }
 
+
+                //fwdPWMchanged3(this.value)
+                //console.log(this.value)
+            }
+            Connections{
+                target: move ;
+                onUpdatedPWM3 :{
+                    console.log(121) ;
+                    flag3 = 1
+                    setPWM3.value=move.getPWM3();
+
+                }
+            }
         }
         Row{
             spacing: 25;

@@ -12,7 +12,9 @@ Rectangle {
         id:col;
         Slider{
             id:setPWM1;
-            value: .7;
+            maximumValue: 5.0
+            stepSize: 1.0
+
 
         }
         Row{

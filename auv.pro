@@ -1,9 +1,10 @@
 TEMPLATE = app
 
-QT += qml quick
+QT += qml quick core quickwidgets widgets
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    signalsfromcpp.cpp
 
 RESOURCES += qml.qrc
 
@@ -38,4 +39,9 @@ DISTFILES += \
     logo .png \
     remote/remote_forward.qml \
     remote/remote_sway.qml \
-    remote/remote_vrward.qml
+    remote/remote_vrward.qml \
+    remote/remote_sway.qml.autosave
+
+HEADERS += \
+    main.h \
+    signalsfromcpp.h

@@ -47,7 +47,7 @@ Window{
             id:frame
             Tab {
                 title: "WELCOME"
-                Loader  { source:"welcome.qml" }
+                Loader  {  source:"welcome.qml" }
             }
           Tab {
                 title: "SENSORS"
