@@ -3,6 +3,10 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 Rectangle {
+
+    property int pWM5 : 0
+    property int pWM6: 0
+
     id:page;
     height:420;
     width:250;
@@ -93,19 +97,35 @@ Rectangle {
                  width:70;
                  border.color:'black';
                  id:pv5
-                 Text{
-                     text:'247';
-                     color:'black';
+                 TextField{
+                     text:move.getPWM5();
+                     horizontalAlignment : TextInput.AlignHCenter;
+                     //color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv5.horizontalCenter;
                      anchors.verticalCenter: pv5.verticalCenter;
+                     width: 68 ;
+                     height : 48;
                      font.bold: true;
                      id:valuePWM5
+                     validator: IntValidator {bottom: -255; top: 255;}
+                     focus: true
+                     onAccepted: {
+                         move.updatePWM5(this.text);
+                     }
 
-                 }
+
+                     Connections{
+                         target: move ;
+                         onUpdatedPWM5 :{
+                             console.log(121) ;
+                             valuePWM5.text=move.getPWM5();
+                         }
+                     }
+
 
              }
-
+    }
 
              //PWM 2
              Rectangle{
@@ -128,15 +148,31 @@ Rectangle {
                  width:70;
                  border.color:'black';
                  id:pv6
-                 Text{
-                     text:'174';
-                     color:'black';
+                 TextField{
+                     text:move.getPWM6();
+                     horizontalAlignment : TextInput.AlignHCenter;
+                     //color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv6.horizontalCenter;
                      anchors.verticalCenter: pv6.verticalCenter;
+                     width: 68 ;
+                     height : 48;
                      font.bold: true;
                      id:valuePWM6
+                     validator: IntValidator {bottom: -255; top: 255;}
+                     focus: true
+                     onAccepted: {
+                         move.updatePWM6(this.text);
+                     }
 
+
+                     Connections{
+                         target: move ;
+                         onUpdatedPWM6 :{
+                             console.log(121) ;
+                             valuePWM6.text=move.getPWM6();
+                         }
+                     }
                  }
              }
          }

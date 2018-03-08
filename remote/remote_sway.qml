@@ -1,8 +1,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
+import Motion.header 1.0
 
 Rectangle {
+
+    property int pWM1 : 0
+    property int pWM2: 0
+
     id:page;
     height:420;
     width:250;
@@ -77,7 +82,7 @@ Rectangle {
                  color:'black';
                  id:p1;
                  Text{
-                     text:'PWM 1';
+                     text:'PWM 2';
                      color:'white';
                      font.pointSize: 12;
                      anchors.horizontalCenter: p1.horizontalCenter;
@@ -91,15 +96,38 @@ Rectangle {
                  width:70;
                  border.color:'black';
                  id:pv1
-                 Text{
-                     text:'247';
-                     color:'black';
+                 TextField{
+                     text:move.getPWM1();
+                     horizontalAlignment : TextInput.AlignHCenter;
+                     //color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv1.horizontalCenter;
                      anchors.verticalCenter: pv1.verticalCenter;
+                     width: 68 ;
+                     height : 48;
                      font.bold: true;
                      id:valuePWM1
+                     validator: IntValidator {bottom: -255; top: 255;}
+                     focus: true
+                     onAccepted: {
+                         move.updatePWM1(this.text);
+                     }
 
+
+                     Connections{
+                         target: move ;
+                         onUpdatedPWM1 :{
+                             console.log(121) ;
+                             valuePWM1.text=move.getPWM1();
+                         }
+                     }
+
+                    /* Remote{
+                         onUpdatedPWM1: {
+                             valuePWM1.text = move.getPWM1();
+                             console.log("ccccc\n");
+                         }
+                     }*/
                  }
 
              }
@@ -126,15 +154,38 @@ Rectangle {
                  width:70;
                  border.color:'black';
                  id:pv2
-                 Text{
-                     text:'174';
-                     color:'black';
+                 TextField{
+                     text:move.getPWM2();
+                     horizontalAlignment : TextInput.AlignHCenter;
+                     //color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv2.horizontalCenter;
                      anchors.verticalCenter: pv2.verticalCenter;
+                     width: 68 ;
+                     height : 48;
                      font.bold: true;
                      id:valuePWM2
+                     validator: IntValidator {bottom: -255; top: 255;}
+                     focus: true
+                     onAccepted: {
+                         move.updatePWM2(this.text);
+                     }
 
+
+                     Connections{
+                         target: move ;
+                         onUpdatedPWM2 :{
+                             console.log(121) ;
+                             valuePWM2.text=move.getPWM2();
+                         }
+                     }
+
+                    /* Remote{
+                         onUpdatedPWM2: {
+                             valuePWM2.text = move.getPWM2();
+                             console.log("ccccc\n");
+                         }
+                     }*/
                  }
              }
          }

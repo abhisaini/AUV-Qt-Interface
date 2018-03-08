@@ -3,6 +3,7 @@ import QtQuick.Controls 1.4
 
 
 Rectangle{
+    property int rosCoreStatus : 0
     height:600;width:900;
     id:page;
    Column{
@@ -55,12 +56,41 @@ Rectangle{
                                height:40;
                                width:40;
                                border.color:'black';
-                               color:'#04dc64';
+                               color:'red';
                                border.width: 2;
-
+                               id : rosColor
                                anchors.horizontalCenter: rosStatus.horizontalCenter;
                                anchors.verticalCenter: rosStatus.verticalCenter;
 
+
+                               MouseArea{
+                                   anchors.fill: parent ;
+                                   cursorShape: Qt.PointingHandCursor;
+                                   onClicked: {
+                                       function rosCoreSwap(){
+                                           console.log(111)
+                                           if (rosCoreStatus == 0){
+                                               ROS.ROScoreOff();
+                                           }
+                                           if (rosCoreStatus == 1){
+
+                                               ROS.ROScore();
+                                           }
+                                       }
+                                       if (rosCoreStatus == 0){
+                                           rosCoreStatus = 1;
+                                           rosColor.color = "#04dc64"
+                                       }
+                                       else if (rosCoreStatus == 1){
+                                           rosCoreStatus = 0;
+                                           rosColor.color = "red"
+                                       }
+                                       rosCoreSwap()
+
+                                       // console.log("clk") ;
+
+                                   }
+                               }
                            }
                        }
                    }
@@ -101,7 +131,7 @@ Rectangle{
                            id:packDown;
                            ComboBox {
                                width: 200
-                               model: [ "Package 1", "Package 2", "Package 3" ]
+                               model: [ "Package 1", "Package 2", "Package 3", "Package 4" ]
                                height:40;
                                anchors.horizontalCenter: packDown.horizontalCenter;
                                anchors.verticalCenter: packDown.verticalCenter;

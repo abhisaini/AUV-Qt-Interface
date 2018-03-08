@@ -113,8 +113,17 @@ Rectangle {
                                                 color:'red';
                                                 anchors.horizontalCenter: nodeStatus1.horizontalCenter;
                                                 anchors.verticalCenter: nodeStatus1.verticalCenter;
+                                                MouseArea{
+                                                    anchors.fill: parent
+                                                     onClicked: {
+                                                         // console.log("111")
+                                                     }
+                                                }
 
                                             }
+//                                            MouseArea{
+//
+//                                            }
 
                                         }
 ////node 2 block info

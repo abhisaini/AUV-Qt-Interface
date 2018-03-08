@@ -126,12 +126,6 @@ Rectangle {
                          }
                      }
 
-                    /* Remote{
-                         onUpdatedPWM3: {
-                             valuePWM3.text = move.getPWM3();
-                             console.log("ccccc\n");
-                         }
-                     }*/
                  }
 
 
@@ -145,7 +139,7 @@ Rectangle {
                  color:'black';
                  id:p4;
                  Text{
-                     text:'PWM 2';
+                     text:'PWM 4';
                      color:'white';
                      font.pointSize: 12;
                      anchors.horizontalCenter: p4.horizontalCenter;
@@ -159,14 +153,31 @@ Rectangle {
                  width:70;
                  border.color:'black';
                  id:pv4
-                 Text{
-                     text:'0';
-                     color:'black';
+                 TextField{
+                     text:move.getPWM4();
+                     horizontalAlignment : TextInput.AlignHCenter;
+                     //color:'black';
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv4.horizontalCenter;
                      anchors.verticalCenter: pv4.verticalCenter;
+                     width: 68 ;
+                     height : 48;
                      font.bold: true;
                      id:valuePWM4
+                     validator: IntValidator {bottom: -255; top: 255;}
+                     focus: true
+                     onAccepted: {
+                         move.updatePWM4(this.text);
+                     }
+
+
+                     Connections{
+                         target: move ;
+                         onUpdatedPWM4 :{
+                             console.log(121) ;
+                             valuePWM4.text=move.getPWM4();
+                         }
+                     }
 
                  }
              }
