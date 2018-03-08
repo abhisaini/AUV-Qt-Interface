@@ -23,8 +23,8 @@
 #include <qt5/QtQml/QQmlEngine>
 
 void Motion :: Sway1(){
-    // rostopic pub /pwm/upward std_msgs/Float64 "255"
-    QString cmd = "rostopic pub /pwm/motor1 std_msgs/Int32 -- " ;
+    // rostopic pub /ard/northsway std_msgs/Float64 "255"
+    QString cmd = "rostopic pub /ard/northsway std_msgs/Int32 -- " ;
     cmd = cmd + QString::number(PWM1) ;
     // cmd = cmd + " " + QString::number(PWM2) ;
     std :: string cmd0 = cmd.toUtf8().constData();
@@ -39,7 +39,7 @@ void Motion :: Sway1(){
     // std :: system(cmd0.c_str());   // To be uncommented
 }
 void Motion :: Forward1(){
-    QString cmd = "rostopic pub /pwm/motor3 std_msgs/Int32 -- " ;
+    QString cmd = "rostopic pub /ard/west std_msgs/Int32 -- " ;
     cmd = cmd + QString::number(PWM3) ;
     std :: string cmd0 = cmd.toUtf8().constData();
     qDebug() << cmd0.c_str() ;
@@ -51,8 +51,8 @@ void Motion :: Forward1(){
     //std :: system(cmd0.c_str());   // To be uncommented
 }
 void Motion :: Sway2(){
-    // rostopic pub /pwm/upward std_msgs/Float64 "255"
-    QString cmd = "rostopic pub /pwm/motor2 std_msgs/Int32 -- " ;
+    // rostopic pub /ard/southsway std_msgs/Float64 "255"
+    QString cmd = "rostopic pub /ard/southsway std_msgs/Int32 -- " ;
     cmd = cmd + QString::number(PWM2) ;
     // cmd = cmd + " " + QString::number(PWM2) ;
     std :: string cmd0 = cmd.toUtf8().constData();
@@ -67,7 +67,7 @@ void Motion :: Sway2(){
     // std :: system(cmd0.c_str());   // To be uncommented
 }
 void Motion :: Forward2(){
-    QString cmd = "rostopic pub /pwm/motor4 std_msgs/Int32 -- " ;
+    QString cmd = "rostopic pub /ard/west std_msgs/Int32 -- " ;
     cmd = cmd + QString::number(PWM4) ;
     // cmd = cmd + " " + QString::number(PWM4) ;
     std :: string cmd0 = cmd.toUtf8().constData();
@@ -78,13 +78,28 @@ void Motion :: Forward2(){
        myProcess->start(cmd);
     //std :: system(cmd0.c_str());   // To be uncommented
 }
-void Motion :: Upward(){
-    QString cmd = "rostopic pub /pwm/upward std_msgs/Float64 " ;
-    cmd += cmd + QString::number(PWM5) ;
-    cmd = cmd + " " + QString::number(PWM6) ;
+void Motion :: Upward1(){
+    QString cmd = "rostopic pub /ard/northup std_msgs/Int32 -- " ;
+    cmd = cmd + QString::number(PWM4) ;
+    // cmd = cmd + " " + QString::number(PWM4) ;
     std :: string cmd0 = cmd.toUtf8().constData();
     qDebug() << cmd0.c_str() ;
     qDebug() << "  \n" ;
+    QObject *parent;
+    QProcess *myProcess = new QProcess(parent);
+       myProcess->start(cmd);
+    //std :: system(cmd0.c_str());   // To be uncommented
+}
+void Motion :: Upward2(){
+    QString cmd = "rostopic pub /ard/southup std_msgs/Int32 -- " ;
+    cmd = cmd + QString::number(PWM4) ;
+    // cmd = cmd + " " + QString::number(PWM4) ;
+    std :: string cmd0 = cmd.toUtf8().constData();
+    qDebug() << cmd0.c_str() ;
+    qDebug() << "  \n" ;
+    QObject *parent;
+    QProcess *myProcess = new QProcess(parent);
+       myProcess->start(cmd);
     //std :: system(cmd0.c_str());   // To be uncommented
 }
 

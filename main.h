@@ -19,7 +19,8 @@ public:
     void Sway1();
     void Forward2();
     void Sway2();
-    void Upward();
+    void Upward1();
+    void Upward2();
 
 
 public Q_SLOTS:
@@ -51,13 +52,13 @@ public Q_SLOTS:
         PWM5 = tmp;
         //getPWM3();
         emit updatedPWM5();
-        Upward();
+        Upward1();
     }
     void updatePWM6(int tmp){
         PWM6 = tmp;
         //getPWM3();
         emit updatedPWM6();
-        Upward();
+        Upward2();
     }
 
 
