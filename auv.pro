@@ -44,4 +44,5 @@ DISTFILES += \
 
 HEADERS += \
     main.h \
-    signalsfromcpp.h
+    signalsfromcpp.h \
+    integrateros.h

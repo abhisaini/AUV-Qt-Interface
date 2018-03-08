@@ -15,9 +15,12 @@ public:
         PWM5 = 0;
         PWM6 = 0;
     }
-    void Forward();
-    void Sway();
-    void Upward();
+    void Forward1();
+    void Sway1();
+    void Forward2();
+    void Sway2();
+    void Upward1();
+    void Upward2();
 
 
 public Q_SLOTS:
@@ -25,37 +28,37 @@ public Q_SLOTS:
         PWM1 = tmp;
         //getPWM3();
         emit updatedPWM1();
-        Sway();
+        Sway1();
     }
     void updatePWM2(int tmp){
         PWM2 = tmp;
         //getPWM3();
         emit updatedPWM2();
-        Sway();
+        Sway2();
     }
     void updatePWM3(int tmp){
         PWM3 = tmp;
         //getPWM3();
         emit updatedPWM3();
-        Forward();
+        Forward1();
     }
     void updatePWM4(int tmp){
         PWM4 = tmp;
         //getPWM3();
         emit updatedPWM4();
-        Forward();
+        Forward2();
     }
     void updatePWM5(int tmp){
         PWM5 = tmp;
         //getPWM3();
         emit updatedPWM5();
-        Upward();
+        Upward1();
     }
     void updatePWM6(int tmp){
         PWM6 = tmp;
         //getPWM3();
         emit updatedPWM6();
-        Upward();
+        Upward2();
     }
 
 
@@ -100,4 +103,7 @@ private:
     int PWM6;
 
 };
+
+
+
 #endif // MAIN_H
