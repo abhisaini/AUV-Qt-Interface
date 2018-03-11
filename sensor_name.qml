@@ -19,7 +19,7 @@ Rectangle{
             border.color:'black';
             Text {
                 id: sensor1
-                text:'Sensor 1';
+                text:'IMU PX4';
                 font.pointSize: 15;
                 anchors.horizontalCenter: sen1.horizontalCenter;
                 anchors.verticalCenter: sen1.verticalCenter;
@@ -35,7 +35,7 @@ Rectangle{
             border.color:'black';
             Text {
                 id: sensor2;
-                text:'Sensor 2';
+                text:'Front Camera';
                 font.pointSize: 15;
                 anchors.horizontalCenter: sen2.horizontalCenter;
                 anchors.verticalCenter: sen2.verticalCenter;
@@ -51,7 +51,7 @@ Rectangle{
             border.color:'black';
             Text {
                 id: sensor3
-                text:'Sensor 3';
+                text:'Bottom Camera';
                 font.pointSize: 15;
                 anchors.horizontalCenter: sen3.horizontalCenter;
                 anchors.verticalCenter: sen3.verticalCenter;
@@ -67,7 +67,7 @@ Rectangle{
             border.color:'black';
             Text {
                 id: sensor4
-                text:'Sensor 4';
+                text:'Pressure sensor';
                 font.pointSize: 15;
                 anchors.horizontalCenter: sen4.horizontalCenter;
                 anchors.verticalCenter: sen4.verticalCenter;
@@ -125,3 +125,11 @@ Rectangle{
     }
 
 }
+
+
+
+/*
+IMU PX4
+Front Camera
+Bottom Camera
+Pressure sensor */
