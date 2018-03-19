@@ -8,7 +8,7 @@ Rectangle {
     property int dirn: 1
 
     height:228;
-    width:246;
+    width:346;
     id:detTh1;
     Column{
         spacing: 40;
@@ -16,6 +16,7 @@ Rectangle {
         anchors.verticalCenter: detTh1.verticalCenter;
         id:col;
         Slider{
+            width : 250;
             id:setPWM2;
             maximumValue: 255.0
             stepSize: 1.0
@@ -44,7 +45,7 @@ Rectangle {
             }
         }
         Row{
-            spacing: 25;
+            spacing: 50;
             anchors.horizontalCenter: col.horizontalCenter;
             Button{
 

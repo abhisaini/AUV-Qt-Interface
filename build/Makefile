@@ -696,15 +696,12 @@ qrc_qml.cpp: ../qml.qrc \
 		../data_log.qml \
 		../remote/thrust4.qml \
 		../remote/remote_forward.qml \
-		../remote/remote_upward.qml \
 		../remote/anticlock.png \
 		../remote/thrust3.qml \
 		../remote/remote_sway.qml \
 		../remote/clock.png \
 		../remote/thrust2.qml \
-		../remote/thrust6.qml \
-		../remote/thrust1.qml \
-		../remote/thrust5.qml
+		../remote/thrust1.qml
 	/home/abhi/Qt5.7.0/5.7/gcc_64/bin/rcc -name qml ../qml.qrc -o qrc_qml.cpp
 
 compiler_moc_header_make_all: moc_main.cpp moc_integrateros.cpp

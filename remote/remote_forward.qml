@@ -10,7 +10,7 @@ Rectangle {
 
     id:page;
     height:420;
-    width:250;
+    width:350;
     border.color:"black";
     border.width: 2;
     Column{
@@ -18,7 +18,7 @@ Rectangle {
         anchors.verticalCenter: page.verticalCenter;
         Rectangle{
          height: 230;
-         width: 250;
+         width: 350;
          border.color: 'black';
          border.width: 2;
          id:cover;
@@ -27,7 +27,7 @@ Rectangle {
 
          TabView{
              height: 228;
-             width: 246;
+             width: 346;
              anchors.horizontalCenter: cover.horizontalCenter;
              anchors.verticalCenter: cover.verticalCenter;
              Tab{
@@ -49,7 +49,7 @@ Rectangle {
                  tab: Rectangle {
                      color: styleData.selected ? "#F6F6F6" :"lightgrey"
                      border.color:  "black"
-                     implicitWidth: Math.max(text.width + 30, 80)
+                     implicitWidth: Math.max(text.width + 80, 130)
                      implicitHeight: styleData.selected ? "32" :"30"
                      radius: 2.5
                      Text {
@@ -68,7 +68,7 @@ Rectangle {
         }
         Rectangle{
          height: 190;
-         width: 250;
+         width: 350;
          border.width: 2;
          border.color: 'black';
          id:detailsPWM
@@ -82,7 +82,7 @@ Rectangle {
              //PWM 1
              Rectangle{
                  height:50;
-                 width:130;
+                 width:190;
                  color:'black';
                  id:p3;
                  Text{
@@ -97,7 +97,7 @@ Rectangle {
              }
              Rectangle{
                  height:50;
-                 width:70;
+                 width:110;
                  border.color:'black';
                  id:pv3
                  TextField{
@@ -107,7 +107,7 @@ Rectangle {
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv3.horizontalCenter;
                      anchors.verticalCenter: pv3.verticalCenter;
-                     width: 68 ;
+                     width: 108 ;
                      height : 48;
                      font.bold: true;
                      id:valuePWM3
@@ -135,7 +135,7 @@ Rectangle {
              //PWM 2
              Rectangle{
                  height:50;
-                 width:130;
+                 width:190;
                  color:'black';
                  id:p4;
                  Text{
@@ -150,7 +150,7 @@ Rectangle {
              }
              Rectangle{
                  height:50;
-                 width:70;
+                 width:110;
                  border.color:'black';
                  id:pv4
                  TextField{
@@ -160,7 +160,7 @@ Rectangle {
                      font.pointSize: 12;
                      anchors.horizontalCenter: pv4.horizontalCenter;
                      anchors.verticalCenter: pv4.verticalCenter;
-                     width: 68 ;
+                     width: 108 ;
                      height : 48;
                      font.bold: true;
                      id:valuePWM4

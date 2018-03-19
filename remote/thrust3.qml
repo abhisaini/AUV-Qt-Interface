@@ -7,7 +7,7 @@ Rectangle {
     property int flag3 : 0
     property int dirn: 1
     height:228;
-    width:246;
+    width:346;
     id:detTh3;
     Column{
         spacing: 40;
@@ -15,6 +15,7 @@ Rectangle {
         anchors.verticalCenter: detTh3.verticalCenter;
         id:col;
         Slider{
+            width : 250;
             id:setPWM3;
             maximumValue: 255.0
             stepSize: 1.0
@@ -43,7 +44,7 @@ Rectangle {
             }
         }
         Row{
-            spacing: 25;
+            spacing: 50;
             anchors.horizontalCenter: col.horizontalCenter;
 
             Button{

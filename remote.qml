@@ -16,16 +16,16 @@ Rectangle{
         height:550;
         Grid{
 
-            columnSpacing:20;
-            columns:3;
-            rows:3;
+            columnSpacing:40;
+            columns:2;
+            rows:2;
             anchors.horizontalCenter: frame.horizontalCenter;
             anchors.verticalCenter: frame.verticalCenter;
             Rectangle{
                 color:"black";
                 id:sway;
                 height:50;
-                width:250;
+                width:350;
                 Text {
 
                     text: qsTr("SWAY");
@@ -41,7 +41,7 @@ Rectangle{
                 color:"black";
                 id:forward;
                 height:50;
-                width:250;
+                width:350;
                 Text {
 
                     text: qsTr("FORWARD");
@@ -53,28 +53,12 @@ Rectangle{
 
                 }
             }
-            Rectangle{
-                height:50;
-                id:vrward;
-                color:"black";
-                width:250;
-                Text {
 
-                    text: qsTr("UPWARD");
-                    font.bold: true;
-                    font.pointSize: 15;
-                    color:"white";
-                    anchors.horizontalCenter: vrward.horizontalCenter;
-                    anchors.verticalCenter: vrward.verticalCenter;
-
-                }
-
-            }
             Rectangle{
                 height:420;
                 border.color:"black";
                 border.width: 2;
-                width:250;
+                width:350;
                 Loader{
                     source:"remote/remote_sway.qml";
                 }
@@ -84,25 +68,16 @@ Rectangle{
                 height:420;
                 border.color:"black";
                 border.width: 2;
-                width:250;
+                width:350;
                 Loader{
                     source:"remote/remote_forward.qml";
                 }
 
             }
-            Rectangle{
-                height:420;
-                border.color:"black";
-                border.width: 2;
-                width:250;
-                Loader{
-                    source:"remote/remote_upward.qml";
-                }
 
-            }
 
             //no use of rectangle...but dont remove
-            Rectangle{
+            /*Rectangle{
                 height: 30;
                 width:250;
             }
@@ -113,25 +88,10 @@ Rectangle{
                 height: 30;
                 width:250;
             }
-
+*/
 
             //keyboard inputs
-            Rectangle{
-                height: 30;
-                width:250;
-                id:keyboardInput;
-                CheckBox {
-                        anchors.right:  keyboardInput.right;
-                        anchors.rightMargin: 15;
 
-                        anchors.verticalCenter: keyboardInput.verticalCenter;
-                        text: qsTr("Keyboard Inputs")
-
-                        checked: true
-                    }
-
-
-            }
 
     }
 }
