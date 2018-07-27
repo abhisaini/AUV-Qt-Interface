@@ -11,6 +11,7 @@
 #include <QQuickWidget>
 #include <QString>
 #include "main.h"
+#include "thread.h"
 #include "integrateros.h"
 #include <QDebug>
 #include <qdebug.h>
@@ -140,7 +141,8 @@ int main(int argc, char *argv[]) {
     ROSfeatures rosFeat ;
     // rosFeat.ROScore();
     qmlRegisterType <Motion> ("Motion.header",1,0,"Remote");
-
+    thread aa;
+    aa.start();
     QQuickView view;
         view.engine()->rootContext()->setContextProperty("move", &move);
         view.engine()->rootContext()->setContextProperty("ROS", &rosFeat);

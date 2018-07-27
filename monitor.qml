@@ -79,7 +79,7 @@ Rectangle{
                    border.width: 2;
                    id:left2;
                    Text{
-                       text:'time';
+                       text:'10 : 35';
                        font.pointSize: 15;
                        font.family: 'comic sans ms';
                        anchors.horizontalCenter: left2.horizontalCenter;
@@ -113,7 +113,7 @@ Rectangle{
                    border.width: 2;
                    id:left3;
                    Text{
-                       text:'time';
+                       text:'1 : 10';
                        font.pointSize: 15;
                        font.family: 'comic sans ms';
                        anchors.horizontalCenter: left3.horizontalCenter;

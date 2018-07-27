@@ -4,7 +4,8 @@ QT += qml quick core quickwidgets widgets
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    signalsfromcpp.cpp
+    signalsfromcpp.cpp \
+    thread.cpp
 
 RESOURCES += qml.qrc
 
@@ -112,5 +113,6 @@ DISTFILES += \
 HEADERS += \
     main.h \
     signalsfromcpp.h \
-    integrateros.h
+    integrateros.h \
+    thread.h
 
